@@ -2,10 +2,25 @@
 
 $ff: "Rubik", sans-serif;
 $fs-input: 1.125rem;
+$fs-output: 1.25rem;
+$fs-label: 0.75rem;
 
 $sc-tablet: 768px;
 $sc-laptop: 1024px;
 $sc-desktop: 1440px;
 
 $very-dark-gray: hsl(0, 0%, 17%);
+$semi-dark-gray: hsl(0, 0%, 28%);
 $dark-gray: hsl(0, 0%, 59%);
+
+$radius: 1.125rem;
+
+$space-1: 1.5rem;
+$space-2: 2rem;
+$space-3: 2.25rem;
+
+$shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+$header-1: 40vh;
+$header-2: 28vh;
+$header-3: 25vh;
