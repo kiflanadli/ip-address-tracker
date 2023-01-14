@@ -15,6 +15,7 @@ export default function Maps({ data }) {
 function MapContent({ position, ip, noMark }) {
   const [map, setMap] = useState(null);
 
+  // re-render map when ip data changed
   useEffect(() => {
     if (map) map.setView(position, 13);
   }, [map, position]);

@@ -3,7 +3,6 @@ export default function Outputs({ output }) {
   let content;
   if (loading) content = "loading...";
   if (error) {
-    console.log(error);
     content = error.response ? error.response.data.messages : error.message;
   }
   if (data) {

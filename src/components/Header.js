@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 export default function Header({ handleSearch }) {
+  // controlled input
   const [input, setInput] = useState("");
   function handleInput(e) {
     setInput(e.target.value);
   }
 
+  // pass the input to parent
   function handleSubmit(e) {
     e.preventDefault();
     handleSearch(input);

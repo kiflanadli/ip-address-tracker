@@ -7,6 +7,7 @@ export default function useAxiosGet(url) {
     data: null,
     error: false,
   });
+  // cached data (if any) is a client's ip data
   const cachedData = JSON.parse(localStorage.getItem("data"));
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function useAxiosGet(url) {
         }));
       }
     };
+    // use cached data (if any) if there is no ip or domain being inputted
     if (
       url ===
         "https://geo.ipify.org/api/v2/country,city?apiKey=at_sky8VeFQENaUN22Jf8beDQPhvka9Y&ipAddress=&domain=" &&
@@ -42,7 +44,7 @@ export default function useAxiosGet(url) {
     } else {
       fetchData();
     }
-  }, [url]);
+  }, [url, cachedData]);
 
   return request;
 }
