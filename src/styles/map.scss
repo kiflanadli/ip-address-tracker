@@ -1,0 +1,26 @@
+@use "util" as *;
+
+#map {
+  height: 80vh;
+  position: relative;
+  z-index: 50;
+  @media screen and (min-width: $sc-laptop) {
+    height: calc(100vh - $header-1);
+  }
+  @media screen and (min-width: $sc-desktop) {
+    height: calc(100vh - $header-2);
+  }
+}
+
+.leaflet-popup-tip-container,
+.leaflet-popup-close-button {
+  display: none;
+}
+
+.leaflet-popup-content-wrapper {
+  font-family: $ff;
+  font-weight: 700;
+  .leaflet-popup-content {
+    margin: $space-1 / 2;
+  }
+}
