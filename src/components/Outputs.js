@@ -24,18 +24,6 @@ export default function Outputs({ output }) {
     );
   }
   return content;
-
-  // return (
-  //   <>
-  //     <OutputSection label="ip address" data={"123.234.543.223"} />
-  //     <hr className="line-section" />
-  //     <OutputSection label="location" data="Jawa Barat, Bekasi" />
-  //     <hr className="line-section" />
-  //     <OutputSection label="timezone" data="UTC +07:00" />
-  //     <hr className="line-section" />
-  //     <OutputSection label="isp" data="Telkomsel Indonesia" />
-  //   </>
-  // );
 }
 
 function OutputSection({ label, data }) {
