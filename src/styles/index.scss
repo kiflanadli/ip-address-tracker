@@ -1,0 +1,16 @@
+@use "util" as *;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+}
+input,
+button {
+  border: unset;
+}
+
+body,
+input {
+  font-family: $ff;
+}
