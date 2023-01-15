@@ -14,9 +14,13 @@ function App() {
 
   // cache first loaded data (client's ip data)
   useEffect(() => {
-    const localData = localStorage.getItem("data");
+    if (!sessionStorage) {
+      console.log("doesn't support web storage");
+      return;
+    }
+    const localData = sessionStorage.getItem("data");
     if (input === "" && output.data && !localData)
-      localStorage.setItem("data", JSON.stringify(output.data));
+      sessionStorage.setItem("data", JSON.stringify(output.data));
   }, [input, output.data]);
 
   return (

@@ -8,7 +8,8 @@ export default function useAxiosGet(url) {
     error: false,
   });
   // cached data (if any) is a client's ip data
-  const cachedData = JSON.parse(localStorage.getItem("data"));
+  let cachedData;
+  if (sessionStorage) cachedData = JSON.parse(sessionStorage.getItem("data"));
 
   useEffect(() => {
     const fetchData = async () => {
