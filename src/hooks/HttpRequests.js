@@ -37,14 +37,14 @@ export default function useAxiosGet(url) {
     // use cached data (if any) if there is no ip or domain being inputted
     if (
       url ===
-        "https://geo.ipify.org/api/v2/country,city?apiKey=at_sky8VeFQENaUN22Jf8beDQPhvka9Y&ipAddress=&domain=" &&
+        "https://geo.ipify.org/api/v2/country,city?apiKey=at_1Xtc0uUHqQCcBsS6UNLaHhNjJ2SeO&ipAddress=&domain=" &&
       cachedData
     ) {
       setRequest(() => ({ loading: false, data: cachedData, error: false }));
     } else {
       fetchData();
     }
-  }, [url, cachedData]);
+  }, [url]);
 
   return request;
 }

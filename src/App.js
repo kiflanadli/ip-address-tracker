@@ -9,12 +9,13 @@ function App() {
   const [input, setInput] = useState("");
   const handleSearch = (value) => setInput(value);
 
-  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_sky8VeFQENaUN22Jf8beDQPhvka9Y&ipAddress=${input}&domain=${input}`;
+  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_1Xtc0uUHqQCcBsS6UNLaHhNjJ2SeO&ipAddress=${input}&domain=${input}`;
   const output = useAxiosGet(url);
 
   // cache first loaded data (client's ip data)
   useEffect(() => {
-    if (input === "" && output.data)
+    const localData = localStorage.getItem("data");
+    if (input === "" && output.data && !localData)
       localStorage.setItem("data", JSON.stringify(output.data));
   }, [input, output.data]);
 
